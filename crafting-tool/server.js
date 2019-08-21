@@ -38,15 +38,15 @@ app.post('/api/world', (req, res) => {
 });
 
 app.get('/api/hello', (req, res) => {
-  let query = "SELECT * FROM tblCraft"; // query database to get all the players
+  let query = "SELECT id AS id, craftName AS craftName FROM tblCraft"; // query database to get all the players
 
   // execute query
   db.query(query, (err, result) => {
     if (err) {
       res.send({ express: 'I failed the DB' });
     }
-    console.log(result[0].craftName)
-    res.send({express: `I succeeded ${result[0].craftName}`})
+    console.log(result)
+    res.send({result})
   });
 });
 
