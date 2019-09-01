@@ -45,7 +45,7 @@ app.get('/api/hello', (req, res) => {
     if (err) {
       res.send({ express: 'I failed the DB' });
     }
-    console.log(result)
+    //console.log(result)
     res.send({result})
   });
 });

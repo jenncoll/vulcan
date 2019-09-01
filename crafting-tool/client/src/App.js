@@ -35,6 +35,7 @@ const SimpleTable = (props) => {
   const classes = useStyles();
   console.log(props.response)
   return (
+    <div>
     <Table className={classes.table}>
       <TableHead>
         <TableRow>
@@ -55,6 +56,7 @@ const SimpleTable = (props) => {
         ))}
       </TableBody>
     </Table>
+    </div>
   )
 }
 
